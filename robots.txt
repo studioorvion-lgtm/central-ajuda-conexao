@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://central-ajuda-conexao.vercel.app/sitemap.xml
