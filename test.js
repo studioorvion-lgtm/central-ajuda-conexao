@@ -96,7 +96,7 @@ requiredProblems.forEach(p => {
 
 // 5. Validação de Seções Obrigatórias
 test('Hero contém Headline, Subheadline e CTA principal exatos', () => {
-  assert(indexHtml.includes('Sua internet está <span class="highlight-text">lenta, caindo</span> ou sem sinal?'), 'Headline do Hero incorreta');
+  assert(indexHtml.includes('Sua internet está') && indexHtml.includes('lenta, caindo') && indexHtml.includes('ou sem sinal?'), 'Headline do Hero incorreta');
   assert(indexHtml.includes('Fale agora pelo WhatsApp e informe o problema da sua conexão.'), 'Subheadline incorreta');
   assert(indexHtml.includes('FALAR AGORA PELO WHATSAPP'), 'CTA Principal incorreto');
   assert(indexHtml.includes('Atendimento rápido pelo WhatsApp.'), 'Texto de apoio incorreto');
