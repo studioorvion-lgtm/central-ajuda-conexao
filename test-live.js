@@ -36,7 +36,7 @@ async function runLiveTests() {
   assert(home.body.includes('Sua internet está') && home.body.includes('lenta, caindo') && home.body.includes('ou sem sinal?'), 'Headline hero ausente ao vivo');
   assert(home.body.includes('O que está acontecendo com sua internet?'), 'Seção de problemas ausente ao vivo');
   assert(home.body.includes('Internet ruim de novo?'), 'CTA final ausente ao vivo');
-  assert(home.body.includes('CHAMAR NO WHATSAPP'), 'Botão final ausente ao vivo');
+  assert(home.body.includes('CHAMAR NO WHATSAPP') || home.body.includes('FALAR PELO WHATSAPP'), 'Botão final ausente ao vivo');
   console.log('✓ Conteúdo do Hero, Seção de Problemas e CTA Final validados ao vivo');
 
   // 3. Validação dos ativos e páginas legais

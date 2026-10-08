@@ -1,58 +1,48 @@
 /* ==========================================================================
-   CENTRAL DE AJUDA & CONECTIVIDADE — REDESIGN TOTAL
-   Tema: Telecom Dark Command Center • Assimetria • Timeline de Diagnóstico
-   Totalmente diferente do padrão clássico em fundo claro e grid de cards
+   CENTRAL DE CONEXÃO — IDENTIDADE TELECOM NIO
+   Paleta: Verde Escuro • Verde Neon • Branco/Off-White • Grafite
+   Design Limpo, Moderno, Mobile-First e Proporcional
    ========================================================================== */
 
 :root {
-  /* Paleta Predominantemente Escura (Deep Telecom Navy & Graphite) */
-  --bg-deep: #050a14;
-  --bg-base: #081020;
-  --bg-surface: #0e192f;
-  --bg-surface-elevated: #14223d;
-  --bg-glass: rgba(14, 25, 47, 0.75);
-  --bg-glass-card: rgba(20, 34, 61, 0.65);
+  /* Paleta Verde Nio & Telecom */
+  --nio-green-deep: #062817;       /* Verde escuro principal de fundo */
+  --nio-green-dark: #093820;       /* Verde escuro secundário/superfície */
+  --nio-green-neon: #00E575;       /* Verde vivo/neon para CTAs e destaques */
+  --nio-green-neon-hover: #00ff85; /* Hover do verde neon */
+  --nio-green-subtle: rgba(0, 229, 117, 0.12); /* Verde neon suave para badges */
+  --nio-green-glow: rgba(0, 229, 117, 0.25);
 
-  /* Acentos de Contraste e Tecnológicos */
-  --neon-cyan: #00d2ff;
-  --neon-cyan-glow: rgba(0, 210, 255, 0.25);
-  --electric-blue: #2563eb;
-  --electric-blue-hover: #1d4ed8;
-  
-  /* Status & WhatsApp CTA */
-  --wa-green: #25d366;
-  --wa-green-hover: #20ba5a;
-  --wa-green-glow: rgba(37, 211, 102, 0.3);
-  --status-red: #ef4444;
-  --status-amber: #f59e0b;
+  /* Superfícies Claras */
+  --bg-white: #ffffff;
+  --bg-offwhite: #f8faf9;
+  --bg-light-surface: #f1f5f3;
 
-  /* Tipografia & Contrastes */
-  --text-white: #ffffff;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-contrast-dark: #050a14;
+  /* Tipografia & Grafite */
+  --text-dark: #0f172a;        /* Grafite profundo para títulos em fundo claro */
+  --text-body: #334155;        /* Grafite para textos corridos */
+  --text-muted: #64748b;       /* Cinza para apoios */
+  --text-white: #ffffff;       /* Branco para fundo verde escuro */
+  --text-light-green: #d1fae5; /* Verde claro suave para subheadlines */
 
-  /* Bordas e Elementos Gráficos */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-cyan: rgba(0, 210, 255, 0.28);
-  --border-green: rgba(37, 211, 102, 0.4);
-  --radius-xs: 6px;
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  /* Bordas & Detalhes */
+  --border-light: #e2e8f0;
+  --border-green: rgba(0, 229, 117, 0.25);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --radius-full: 9999px;
 
-  /* Sombras Profundas */
-  --shadow-dark: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
-  --shadow-glow-cyan: 0 0 25px rgba(0, 210, 255, 0.2);
-  --shadow-cta-glow: 0 8px 30px rgba(37, 211, 102, 0.35);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 4px 14px rgba(6, 40, 23, 0.06);
+  --shadow-card-hover: 0 8px 24px rgba(6, 40, 23, 0.12);
+  --shadow-neon-cta: 0 8px 24px rgba(0, 229, 117, 0.35);
 
-  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --container-max: 1140px;
+  --font-family: -apple-system, BlinkMacSystemFont, "Plus Jakarta Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --container-max: 1080px;
 }
 
-/* Reset e Configurações Globais */
+/* Reset Global Seguro */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -66,20 +56,15 @@ html {
 }
 
 body {
-  font-family: var(--font-main);
-  background-color: var(--bg-deep);
-  color: var(--text-primary);
+  font-family: var(--font-family);
+  background-color: var(--bg-offwhite);
+  color: var(--text-dark);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   width: 100%;
-  padding-bottom: 78px; /* Espaço para barra mobile inferior */
-  background-image: 
-    radial-gradient(circle at 15% 15%, rgba(0, 210, 255, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 85% 35%, rgba(37, 99, 235, 0.07) 0%, transparent 45%),
-    linear-gradient(180deg, #050a14 0%, #081020 100%);
-  background-attachment: fixed;
+  padding-bottom: 74px; /* Espaço para o botão fixo mobile */
 }
 
 @media (min-width: 769px) {
@@ -93,7 +78,13 @@ a {
   text-decoration: none;
 }
 
-/* Container Responsivo */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -103,7 +94,7 @@ a {
   padding-right: 20px;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
   .container {
     padding-left: 14px;
     padding-right: 14px;
@@ -111,825 +102,719 @@ a {
 }
 
 /* ==========================================================================
-   HEADER — ESTILO TERMINAL DE REDE MODERNO
+   1. HEADER (Fundo Verde Escuro, Nome Neutro, Indicador WhatsApp)
    ========================================================================== */
 .site-header {
-  border-bottom: 1px solid var(--border-subtle);
-  background: rgba(5, 10, 20, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  background-color: var(--nio-green-deep);
+  border-bottom: 1px solid rgba(0, 229, 117, 0.15);
   padding: 14px 0;
+  position: relative;
+  z-index: 40;
 }
 
-.header-row {
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-}
-
-.header-brand {
-  display: flex;
-  align-items: center;
   gap: 12px;
 }
 
-.telecom-logo-icon {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, rgba(0, 210, 255, 0.15) 0%, rgba(37, 99, 235, 0.25) 100%);
-  border: 1px solid var(--border-cyan);
-  border-radius: var(--radius-xs);
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-telecom-badge {
+  width: 28px;
+  height: 28px;
+  background: rgba(0, 229, 117, 0.15);
+  border: 1px solid rgba(0, 229, 117, 0.4);
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--neon-cyan);
-  box-shadow: 0 0 12px rgba(0, 210, 255, 0.2);
+  color: var(--nio-green-neon);
+  flex-shrink: 0;
 }
 
-.brand-text-col {
-  display: flex;
-  flex-direction: column;
+.brand-telecom-badge svg {
+  width: 16px;
+  height: 16px;
 }
 
-.brand-title {
+.brand-name {
   font-size: 0.95rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.01em;
   color: var(--text-white);
   text-transform: uppercase;
 }
 
-.brand-subtitle {
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--neon-cyan);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.live-channel-pill {
+.header-status-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(37, 211, 102, 0.08);
-  border: 1px solid rgba(37, 211, 102, 0.3);
+  background: rgba(0, 229, 117, 0.1);
+  border: 1px solid rgba(0, 229, 117, 0.25);
   padding: 5px 12px;
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   font-weight: 700;
-  color: #4ade80;
+  color: #a7f3d0;
 }
 
-.live-pulse {
-  width: 8px;
-  height: 8px;
+.pulse-dot {
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background-color: var(--wa-green);
-  box-shadow: 0 0 8px var(--wa-green);
-  animation: pulseBeacon 1.8s infinite ease-in-out;
+  background-color: var(--nio-green-neon);
+  box-shadow: 0 0 8px var(--nio-green-neon);
+  animation: pulseNeon 2s infinite ease-in-out;
 }
 
-@keyframes pulseBeacon {
+@keyframes pulseNeon {
   0% { transform: scale(0.9); opacity: 0.8; }
-  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 14px var(--wa-green); }
+  50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 12px var(--nio-green-neon); }
   100% { transform: scale(0.9); opacity: 0.8; }
 }
 
 /* ==========================================================================
-   HERO ASSIMÉTRICO (Grid 2 Colunas com Grande Elemento Gráfico SVG)
+   2. HERO (Fundo Verde Escuro com Formas Abstratas Verdes)
    ========================================================================== */
-.hero-asymmetric {
-  padding: 44px 0 60px;
+.hero-section {
+  background-color: var(--nio-green-deep);
   position: relative;
   overflow: hidden;
-}
-
-@media (min-width: 900px) {
-  .hero-asymmetric {
-    padding: 72px 0 80px;
-  }
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 36px;
-  align-items: center;
-}
-
-@media (min-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 48px;
-  }
-}
-
-/* Coluna Esquerda do Hero: Headline Gigante + Bloco de CTA */
-.hero-content-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.hud-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(0, 210, 255, 0.08);
-  border: 1px solid var(--border-cyan);
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  color: var(--neon-cyan);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  width: fit-content;
-}
-
-.hud-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--neon-cyan);
-}
-
-.hero-giant-headline {
-  font-size: clamp(2.3rem, 5.2vw, 3.8rem);
-  line-height: 1.08;
-  font-weight: 900;
-  letter-spacing: -0.035em;
+  padding: 38px 0 46px;
   color: var(--text-white);
-  margin-bottom: 18px;
-}
-
-.hero-giant-headline .gradient-accent {
-  background: linear-gradient(90deg, #ffffff 0%, #38bdf8 50%, #00d2ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-.hero-giant-headline .alert-accent {
-  color: #38bdf8;
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 210, 255, 0.5);
-  text-underline-offset: 6px;
-}
-
-.hero-lead-text {
-  font-size: 1.15rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  margin-bottom: 28px;
-  max-width: 540px;
+  background-image: 
+    radial-gradient(circle at 85% 15%, rgba(0, 229, 117, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 10% 75%, rgba(0, 229, 117, 0.08) 0%, transparent 40%);
 }
 
 @media (min-width: 769px) {
-  .hero-lead-text {
-    font-size: 1.25rem;
+  .hero-section {
+    padding: 60px 0 68px;
   }
 }
 
-/* CTA EM BLOCO GRANDE (Massivo, alto contraste e direto) */
-.hero-cta-massive-block {
-  background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-cyan);
-  border-radius: var(--radius-md);
-  padding: 22px 20px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), var(--shadow-glow-cyan);
-  position: relative;
-  overflow: hidden;
-  max-width: 520px;
-}
-
-.hero-cta-massive-block::before {
-  content: '';
+/* Formas Abstratas de Fundo em SVG/CSS */
+.hero-abstract-shapes {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--neon-cyan) 0%, var(--wa-green) 100%);
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.45;
 }
 
-.cta-block-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 14px;
+.abstract-glow-circle {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 229, 117, 0.2) 0%, transparent 70%);
 }
 
-.cta-block-label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--neon-cyan);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.cta-response-badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #4ade80;
-  background: rgba(37, 211, 102, 0.12);
-  padding: 3px 8px;
-  border-radius: var(--radius-xs);
-}
-
-.btn-cta-giant {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 900;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding: 18px 24px;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-cta-glow);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  width: 100%;
+.hero-content-wrap {
+  position: relative;
+  z-index: 10;
+  max-width: 720px;
+  margin: 0 auto;
   text-align: center;
 }
 
+/* Pequeno elemento gráfico de sinal/Wi-Fi em SVG elegante */
+.hero-signal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 229, 117, 0.12);
+  border: 1px solid rgba(0, 229, 117, 0.3);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--nio-green-neon);
+  margin-bottom: 20px;
+}
+
+.hero-signal-badge svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* Headline Grande, Equilibrada e Impactante */
+.hero-headline {
+  font-size: clamp(1.85rem, 5.2vw, 3.1rem);
+  line-height: 1.16;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: var(--text-white);
+  margin-bottom: 16px;
+}
+
+.hero-headline .highlight-neon {
+  color: var(--nio-green-neon);
+}
+
+.hero-subheadline {
+  font-size: clamp(1.05rem, 2.5vw, 1.22rem);
+  line-height: 1.5;
+  color: var(--text-light-green);
+  max-width: 580px;
+  margin: 0 auto 28px;
+  font-weight: 500;
+}
+
+/* CTA Verde Vivo/Neon (Proporcional, sem ícone gigante) */
+.hero-cta-wrapper {
+  margin-bottom: 14px;
+}
+
+.btn-cta-neon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--nio-green-neon);
+  color: #052012;
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-neon-cta);
+  transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+  width: 100%;
+  max-width: 380px;
+  height: 54px;
+}
+
 @media (min-width: 480px) {
-  .btn-cta-giant {
-    font-size: 1.18rem;
-    padding: 20px 28px;
+  .btn-cta-neon {
+    font-size: 1.1rem;
+    padding: 16px 36px;
   }
 }
 
-.btn-cta-giant:hover {
-  background: linear-gradient(135deg, #2ae06d 0%, #1eb956 100%);
+.btn-cta-neon:hover {
+  background-color: var(--nio-green-neon-hover);
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 10px 28px rgba(0, 229, 117, 0.45);
 }
 
-.btn-cta-giant:active {
+.btn-cta-neon:active {
   transform: translateY(0);
 }
 
-.btn-cta-giant svg {
-  width: 28px;
-  height: 28px;
+/* Ícone de WhatsApp em tamanho PROPORCIONAL normal (20-22px) */
+.btn-cta-neon svg {
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
+  fill: currentColor;
 }
 
-.cta-block-support {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+.hero-support-text {
   font-size: 0.88rem;
-  color: var(--text-secondary);
-  margin-top: 12px;
-  font-weight: 600;
-}
-
-.cta-block-support svg {
-  color: var(--wa-green);
-  flex-shrink: 0;
-}
-
-/* Coluna Direita do Hero: GRANDE ELEMENTO VISUAL DE SINAL EM SVG/CSS */
-.hero-visual-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.telecom-radar-card {
-  width: 100%;
-  max-width: 420px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  box-shadow: var(--shadow-dark);
-  position: relative;
-}
-
-.radar-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 12px;
-}
-
-.radar-telecom-id {
-  font-size: 0.76rem;
-  font-family: monospace;
-  color: var(--neon-cyan);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-.radar-status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--status-amber);
-  background: rgba(245, 158, 11, 0.1);
-  padding: 3px 8px;
-  border-radius: var(--radius-xs);
-}
-
-/* Grande Visual SVG da Torre e Espectro */
-.radar-svg-container {
-  width: 100%;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.radar-svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* Animações CSS para os anéis de rádio e onda de sinal */
-.pulse-wave-1 {
-  animation: radarWave 2.8s infinite ease-out;
-  transform-origin: center;
-}
-.pulse-wave-2 {
-  animation: radarWave 2.8s infinite 0.7s ease-out;
-  transform-origin: center;
-}
-.pulse-wave-3 {
-  animation: radarWave 2.8s infinite 1.4s ease-out;
-  transform-origin: center;
-}
-
-@keyframes radarWave {
-  0% { transform: scale(0.6); opacity: 1; }
-  100% { transform: scale(1.6); opacity: 0; }
-}
-
-.telecom-telemetry-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.telemetry-item {
-  background: rgba(5, 10, 20, 0.6);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xs);
-  padding: 8px 12px;
-}
-
-.telemetry-label {
-  font-size: 0.68rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-weight: 700;
-}
-
-.telemetry-value {
-  font-size: 0.88rem;
-  font-weight: 800;
-  color: var(--text-white);
-  font-family: monospace;
-}
-
-.telemetry-value.warn {
-  color: var(--status-amber);
-}
-
-.telemetry-value.crit {
-  color: var(--status-red);
+  color: #a7f3d0;
+  font-weight: 500;
 }
 
 /* ==========================================================================
-   PROBLEMAS EM LISTA / TIMELINE VISUAL
-   (SEM grade de cards igual ao primeiro)
+   3. SEÇÃO DE PROBLEMAS (Fundo Branco/Off-White, Composição Moderna)
    ========================================================================== */
-.problems-timeline-section {
-  padding: 56px 0 70px;
-  background: linear-gradient(180deg, var(--bg-base) 0%, var(--bg-deep) 100%);
-  border-top: 1px solid var(--border-subtle);
-  position: relative;
+.problems-section {
+  padding: 48px 0 54px;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-light);
 }
 
-.section-tagline {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--neon-cyan);
-  font-size: 0.8rem;
+@media (min-width: 769px) {
+  .problems-section {
+    padding: 60px 0 68px;
+  }
+}
+
+.section-header-clean {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 34px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.78rem;
   font-weight: 800;
+  color: var(--nio-green-deep);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
+  background: var(--bg-light-surface);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
   margin-bottom: 10px;
 }
 
-.timeline-main-title {
-  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
-  font-weight: 900;
-  line-height: 1.18;
-  color: var(--text-white);
+.section-title {
+  font-size: clamp(1.6rem, 3.8vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.22;
+  color: var(--text-dark);
   letter-spacing: -0.02em;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.timeline-lead-desc {
-  color: var(--text-secondary);
-  font-size: 1.02rem;
-  max-width: 620px;
-  margin-bottom: 38px;
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
-/* Estrutura da Timeline Visual */
-.diagnostic-timeline {
-  display: flex;
-  flex-direction: column;
+/* Composição Moderna dos Problemas (Cards Táteis Limpos) */
+.problems-modern-grid {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 12px;
-  position: relative;
 }
 
-/* Linha / Item da Timeline */
-.timeline-row-item {
+@media (min-width: 580px) {
+  .problems-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  .problems-modern-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+.problem-card-item {
+  background: var(--bg-offwhite);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-left: 4px solid var(--electric-blue);
-  border-radius: var(--radius-sm);
-  padding: 16px 20px;
-  gap: 16px;
-  transition: all 0.22s ease;
+  gap: 14px;
+  transition: all 0.2s ease;
   cursor: pointer;
-  position: relative;
+  box-shadow: var(--shadow-sm);
 }
 
-.timeline-row-item:hover {
-  background: var(--bg-surface-elevated);
-  border-color: var(--border-cyan);
-  border-left-color: var(--neon-cyan);
-  transform: translateX(4px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 210, 255, 0.1);
+.problem-card-item:hover {
+  background: var(--bg-white);
+  border-color: var(--nio-green-neon);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
 }
 
-.timeline-row-item:active {
-  transform: translateX(0);
+.problem-card-item:active {
+  transform: translateY(0);
 }
 
-/* Estados de severidade da timeline */
-.timeline-row-item.sev-lenta { border-left-color: #38bdf8; }
-.timeline-row-item.sev-ruim { border-left-color: #f59e0b; }
-.timeline-row-item.sev-caindo { border-left-color: #f97316; }
-.timeline-row-item.sev-sinal { border-left-color: #ef4444; }
-.timeline-row-item.sev-travando { border-left-color: #a855f7; }
-.timeline-row-item.sev-instavel { border-left-color: #06b6d4; }
-.timeline-row-item.sev-fora { border-left-color: #dc2626; }
-
-.timeline-left {
+.problem-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-light-surface);
+  color: var(--nio-green-deep);
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.problem-icon-box svg {
+  width: 20px;
+  height: 20px;
+}
+
+.problem-card-item:hover .problem-icon-box {
+  background: var(--nio-green-deep);
+  color: var(--nio-green-neon);
+}
+
+.problem-info-col {
   flex: 1;
   min-width: 0;
 }
 
-.timeline-index-code {
-  font-family: monospace;
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: var(--neon-cyan);
-  background: rgba(0, 210, 255, 0.08);
-  padding: 4px 8px;
-  border-radius: var(--radius-xs);
-  flex-shrink: 0;
-}
-
-.timeline-details {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.timeline-problem-heading {
-  font-size: 1.12rem;
-  font-weight: 800;
-  color: var(--text-white);
+.problem-name {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-dark);
   margin-bottom: 2px;
 }
 
-.timeline-problem-symptom {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@media (max-width: 600px) {
-  .timeline-problem-symptom {
-    white-space: normal;
-  }
-}
-
-.timeline-action-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(37, 211, 102, 0.12);
-  border: 1px solid var(--border-green);
-  color: #4ade80;
+.problem-hint {
   font-size: 0.82rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 10px 16px;
-  border-radius: var(--radius-xs);
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.problem-arrow-icon {
+  color: #cbd5e1;
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.timeline-row-item:hover .timeline-action-btn {
-  background: var(--wa-green);
-  color: #ffffff;
-  border-color: var(--wa-green);
-  box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+.problem-arrow-icon svg {
+  width: 16px;
+  height: 16px;
 }
 
-@media (max-width: 480px) {
-  .timeline-row-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-  .timeline-action-btn {
-    width: 100%;
-    justify-content: center;
-  }
+.problem-card-item:hover .problem-arrow-icon {
+  color: var(--nio-green-deep);
+  transform: translateX(3px);
 }
 
 /* ==========================================================================
-   SEÇÃO CONTEXTUAL NIO DISCRETA (Estilo Radar Técnico)
+   4. SEÇÃO VISUAL (Ilustração Própria em SVG/CSS Proporcional)
    ========================================================================== */
-.nio-context-section {
-  padding: 50px 0;
-  background: var(--bg-deep);
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
+.visual-section {
+  padding: 44px 0;
+  background-color: var(--bg-offwhite);
+  border-bottom: 1px solid var(--border-light);
 }
 
-.nio-tech-box {
-  background: linear-gradient(135deg, rgba(14, 25, 47, 0.6) 0%, rgba(20, 34, 61, 0.4) 100%);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 32px 26px;
-  position: relative;
+.visual-banner-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
 }
 
 @media (min-width: 769px) {
-  .nio-tech-box {
-    padding: 40px 36px;
+  .visual-banner-card {
+    flex-direction: row;
+    text-align: left;
+    padding: 30px 36px;
+    gap: 32px;
   }
 }
 
-.nio-tech-badge {
-  display: inline-flex;
+.visual-illustration-wrap {
+  width: 100%;
+  max-width: 180px;
+  height: 110px;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--neon-cyan);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background: rgba(0, 210, 255, 0.08);
-  border: 1px solid var(--border-cyan);
-  padding: 4px 10px;
-  border-radius: var(--radius-xs);
-  margin-bottom: 16px;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.nio-headline {
-  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+.visual-illustration-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.visual-content-col {
+  flex: 1;
+}
+
+.visual-title {
+  font-size: 1.25rem;
   font-weight: 800;
-  line-height: 1.35;
-  color: var(--text-white);
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.visual-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.5;
   margin-bottom: 14px;
 }
 
-.nio-body-text {
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  margin-bottom: 24px;
-  max-width: 820px;
-}
-
-.nio-action-row {
+.visual-features-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  align-items: center;
+  gap: 12px 18px;
 }
 
-.btn-nio-wa {
+.visual-feature-pill {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-cyan);
-  color: var(--text-white);
-  font-size: 0.92rem;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--nio-green-deep);
+}
+
+.visual-feature-pill svg {
+  width: 14px;
+  height: 14px;
+  color: var(--nio-green-neon);
+  fill: #062817;
+}
+
+/* ==========================================================================
+   5. CONTEXTO NIO DISCRETO
+   ========================================================================== */
+.nio-context-clean {
+  padding: 40px 0;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.nio-context-box {
+  background: #f4faf6;
+  border: 1px solid rgba(0, 229, 117, 0.35);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .nio-context-box {
+    padding: 28px 30px;
+  }
+}
+
+.nio-badge-tag {
+  display: inline-block;
+  font-size: 0.75rem;
   font-weight: 800;
-  padding: 13px 22px;
+  color: var(--nio-green-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0, 229, 117, 0.18);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+
+.nio-query-headline {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+@media (min-width: 769px) {
+  .nio-query-headline {
+    font-size: 1.3rem;
+  }
+}
+
+.nio-query-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-body);
+  margin-bottom: 16px;
+}
+
+.btn-nio-clean-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--nio-green-deep);
+  color: var(--text-white);
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 11px 20px;
   border-radius: var(--radius-sm);
   transition: all 0.2s ease;
 }
 
-.btn-nio-wa:hover {
-  background: var(--electric-blue);
-  border-color: var(--electric-blue);
-  transform: translateY(-2px);
+.btn-nio-clean-wa svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.btn-nio-clean-wa:hover {
+  background: #093820;
+  color: var(--nio-green-neon);
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
-   COMO FUNCIONA (Fluxo Técnico Direto)
+   COMO FUNCIONA (3 Passos Claros e Simples)
    ========================================================================== */
-.workflow-section {
-  padding: 56px 0;
-  background: var(--bg-base);
+.steps-clean-section {
+  padding: 44px 0 50px;
+  background-color: var(--bg-offwhite);
+  border-bottom: 1px solid var(--border-light);
 }
 
-.workflow-steps-wrap {
+.steps-clean-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
-  margin-top: 32px;
+  gap: 14px;
 }
 
-@media (min-width: 769px) {
-  .workflow-steps-wrap {
+@media (min-width: 680px) {
+  .steps-clean-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 16px;
   }
 }
 
-.workflow-step-node {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
+.step-clean-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 26px 22px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  padding: 20px 18px;
 }
 
-.step-node-badge {
-  font-family: monospace;
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: var(--neon-cyan);
-  margin-bottom: 14px;
-}
-
-.step-node-title {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--text-white);
-  margin-bottom: 8px;
-}
-
-.step-node-desc {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ==========================================================================
-   CTA FINAL — BLOCO GIGANTE EM DARK MODE
-   ========================================================================== */
-.final-command-section {
-  padding: 64px 0 76px;
-  background: radial-gradient(circle at 50% 0%, rgba(0, 210, 255, 0.1) 0%, transparent 60%),
-              linear-gradient(180deg, var(--bg-deep) 0%, #03060c 100%);
-  text-align: center;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.final-panel-box {
-  max-width: 680px;
-  margin: 0 auto;
-  background: var(--bg-surface-elevated);
-  border: 1.5px solid var(--border-cyan);
-  border-radius: var(--radius-lg);
-  padding: 38px 24px;
-  box-shadow: var(--shadow-dark), 0 0 40px rgba(0, 210, 255, 0.15);
-}
-
-@media (min-width: 769px) {
-  .final-panel-box {
-    padding: 50px 42px;
-  }
-}
-
-.final-panel-headline {
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: var(--text-white);
-  line-height: 1.15;
-  margin-bottom: 14px;
-}
-
-.final-panel-desc {
-  font-size: 1.12rem;
-  color: var(--text-secondary);
-  margin-bottom: 30px;
-}
-
-.btn-final-massive {
+.step-badge-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--nio-green-deep);
+  color: var(--nio-green-neon);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
-  color: #ffffff;
-  font-size: 1.15rem;
+  font-weight: 800;
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+}
+
+.step-card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.step-card-desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   6. CTA FINAL (Fundo Verde Escuro, Botão Grande Verde Neon)
+   ========================================================================== */
+.final-cta-section {
+  background-color: var(--nio-green-deep);
+  color: var(--text-white);
+  padding: 48px 0 54px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(circle at 50% 10%, rgba(0, 229, 117, 0.12) 0%, transparent 60%);
+}
+
+@media (min-width: 769px) {
+  .final-cta-section {
+    padding: 64px 0 70px;
+  }
+}
+
+.final-headline {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
   font-weight: 900;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.final-subtext {
+  font-size: 1.08rem;
+  color: var(--text-light-green);
+  max-width: 500px;
+  margin: 0 auto 28px;
+}
+
+.btn-final-neon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--nio-green-neon);
+  color: #052012;
+  font-size: 1.08rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  padding: 20px 32px;
+  padding: 16px 36px;
   border-radius: var(--radius-md);
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  box-shadow: var(--shadow-neon-cta);
   transition: all 0.2s ease;
   width: 100%;
+  max-width: 380px;
+  height: 54px;
 }
 
-.btn-final-massive:hover {
-  background: linear-gradient(135deg, #2ae06d 0%, #1eb956 100%);
+.btn-final-neon:hover {
+  background-color: var(--nio-green-neon-hover);
   transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.55);
+  box-shadow: 0 10px 30px rgba(0, 229, 117, 0.5);
 }
 
-.btn-final-massive:active {
+.btn-final-neon:active {
   transform: translateY(0);
 }
 
+.btn-final-neon svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
 /* ==========================================================================
-   RODAPÉ TÉCNICO
+   RODAPÉ (Institucional Limpo)
    ========================================================================== */
 .site-footer {
-  background: #020408;
-  color: var(--text-muted);
-  padding: 36px 0 28px;
+  background-color: #04180e;
+  color: #64748b;
+  padding: 32px 0 24px;
   font-size: 0.8rem;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.footer-content-col {
+.footer-inner-col {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
-.footer-legal-links {
+.footer-nav-row {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   align-items: center;
 }
 
-.footer-legal-links a {
-  color: var(--text-secondary);
+.footer-nav-row a {
+  color: #94a3b8;
   transition: color 0.2s ease;
 }
 
-.footer-legal-links a:hover {
-  color: var(--neon-cyan);
+.footer-nav-row a:hover {
+  color: var(--nio-green-neon);
 }
 
-.footer-disclaimer-text {
-  max-width: 820px;
-  line-height: 1.55;
+.footer-legal-copy {
+  line-height: 1.5;
   color: #64748b;
+  max-width: 800px;
 }
 
 /* ==========================================================================
-   STICKY BAR INFERIOR MOBILE (Estilo Dark HUD com Botão Verde Neon)
+   7. MOBILE STICKY BAR (Botão Fixo de WhatsApp no Rodapé Mobile)
    ========================================================================== */
 .mobile-sticky-bar {
   display: none;
@@ -937,12 +822,12 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(5, 10, 20, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(6, 40, 23, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 10px 14px;
-  border-top: 1px solid var(--border-cyan);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
+  border-top: 1px solid rgba(0, 229, 117, 0.3);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
 
@@ -956,15 +841,26 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
-  color: #ffffff;
-  font-size: 1rem;
+  gap: 8px;
+  background-color: var(--nio-green-neon);
+  color: #052012;
+  font-size: 0.98rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  padding: 14px 20px;
+  letter-spacing: 0.02em;
+  padding: 13px 20px;
   border-radius: var(--radius-sm);
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
   width: 100%;
+  box-shadow: 0 4px 14px rgba(0, 229, 117, 0.4);
+}
+
+.mobile-sticky-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.mobile-sticky-btn:active {
+  background-color: var(--nio-green-neon-hover);
 }

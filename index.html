@@ -15,7 +15,7 @@
   <meta property="og:title" content="Internet Lenta, Caindo ou Sem Sinal? Fale pelo WhatsApp">
   <meta property="og:description" content="Está com internet lenta, caindo, travando ou sem sinal? Fale agora pelo WhatsApp e informe o problema da sua conexão.">
   <meta property="og:url" content="https://central-ajuda-conexao.vercel.app/">
-  <meta property="og:site_name" content="Central de Conectividade">
+  <meta property="og:site_name" content="Central Conecta">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +30,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Central de Ajuda e Conectividade",
+    "name": "Central Conecta",
     "url": "https://central-ajuda-conexao.vercel.app/",
     "potentialAction": {
       "@type": "ContactAction",
@@ -51,346 +51,356 @@
 <body>
 
   <!-- ==========================================================================
-       HEADER TÉCNICO (Dark Command Center)
+       1. HEADER (Fundo Verde Escuro, Nome Neutro, Indicador WhatsApp)
        ========================================================================== -->
   <header class="site-header" role="banner">
-    <div class="container header-row">
-      <div class="header-brand">
-        <div class="telecom-logo-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <div class="brand-telecom-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+            <line x1="12" y1="20" x2="12.01" y2="20"></line>
           </svg>
         </div>
-        <div class="brand-text-col">
-          <span class="brand-title">CENTRAL DE REDE & CONEXÃO</span>
-          <span class="brand-subtitle">Canal Direto de Atendimento</span>
-        </div>
+        <span class="brand-name">CENTRAL CONECTA</span>
       </div>
 
-      <div class="live-channel-pill" aria-label="Status do canal: Online">
-        <span class="live-pulse"></span>
-        <span>Atendimento Online</span>
+      <div class="header-status-pill" aria-label="Status do atendimento: Online">
+        <span class="pulse-dot"></span>
+        <span>Atendimento pelo WhatsApp</span>
       </div>
     </div>
   </header>
 
   <main>
     <!-- ==========================================================================
-       HERO ASSIMÉTRICO (Headline Gigante + Grande Elemento Visual SVG + Bloco CTA)
+       2. HERO (Fundo Verde Escuro com Formas Abstratas, Headline Grande e CTA Verde Vivo)
        ========================================================================== -->
-    <section class="hero-asymmetric" aria-labelledby="hero-title">
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-abstract-shapes" aria-hidden="true">
+        <div class="abstract-glow-circle"></div>
+      </div>
+
       <div class="container">
-        <div class="hero-grid">
+        <div class="hero-content-wrap">
           
-          <!-- Coluna 1: Headline Gigante e Bloco CTA -->
-          <div class="hero-content-col">
-            <div class="hud-tag">
-              <span class="hud-dot"></span>
-              Diagnóstico de Rede em Tempo Real
-            </div>
-
-            <h1 id="hero-title" class="hero-giant-headline">
-              Sua internet está <span class="gradient-accent highlight-text">lenta, caindo</span> ou sem sinal?
-            </h1>
-
-            <p class="hero-lead-text">
-              Fale agora pelo WhatsApp e informe o problema da sua conexão.
-            </p>
-
-            <!-- CTA EM BLOCO GRANDE (Não botão pequeno perdido) -->
-            <div class="hero-cta-massive-block">
-              <div class="cta-block-header">
-                <span class="cta-block-label">Canal Oficial de Atendimento</span>
-                <span class="cta-response-badge">RESPOSTA IMEDIATA</span>
-              </div>
-
-              <a href="#" class="btn-cta-giant" data-wa-action="true" data-wa-problem="" role="button" aria-label="Falar agora pelo WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.67 20.16 9.33 19.8 8.15 19.1L7.87 18.93L4.76 19.75L5.59 16.72L5.4 16.42C4.63 15.19 4.22 13.57 4.22 11.91C4.22 7.37 7.92 3.67 12.04 3.67ZM8.73 7.34C8.52 7.34 8.24 7.37 8.01 7.63C7.77 7.89 7.07 8.54 7.07 9.87C7.07 11.2 8.04 12.48 8.18 12.66C8.32 12.84 10.03 15.49 12.67 16.63C13.3 16.9 13.79 17.06 14.17 17.18C14.81 17.38 15.39 17.35 15.85 17.28C16.36 17.2 17.43 16.63 17.65 16C17.87 15.37 17.87 14.83 17.8 14.72C17.73 14.61 17.56 14.54 17.3 14.41C17.04 14.28 15.77 13.65 15.54 13.57C15.31 13.48 15.14 13.44 14.97 13.7C14.8 13.96 14.32 14.54 14.17 14.71C14.02 14.89 13.88 14.91 13.62 14.78C13.36 14.65 12.52 14.38 11.53 13.5C10.75 12.8 10.22 11.95 10.07 11.69C9.92 11.43 10.05 11.29 10.18 11.16C10.3 11.04 10.45 10.85 10.59 10.68C10.73 10.51 10.77 10.38 10.86 10.21C10.95 10.04 10.9 9.89 10.83 9.76C10.76 9.63 10.24 8.35 10.03 7.83C9.82 7.33 9.61 7.39 9.45 7.39C9.3 7.39 9.13 7.39 8.96 7.39L8.73 7.34Z"/>
-                </svg>
-                FALAR AGORA PELO WHATSAPP
-              </a>
-
-              <div class="cta-block-support">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Atendimento rápido pelo WhatsApp.</span>
-              </div>
-            </div>
+          <!-- Pequeno elemento gráfico de Wi-Fi/sinal em SVG elegante -->
+          <div class="hero-signal-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+              <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+              <line x1="12" y1="20" x2="12.01" y2="20"></line>
+            </svg>
+            <span>Verificação e Diagnóstico de Conexão</span>
           </div>
 
-          <!-- Coluna 2: GRANDE ELEMENTO VISUAL DE SINAL/WI-FI/CONEXÃO EM SVG/CSS -->
-          <div class="hero-visual-col" aria-hidden="true">
-            <div class="telecom-radar-card">
-              <div class="radar-card-top">
-                <span class="radar-telecom-id">STATUS DA REDE #BR-09</span>
-                <span class="radar-status-badge">INSTABILIDADE DETECTADA</span>
-              </div>
+          <h1 id="hero-title" class="hero-headline">
+            Sua internet está <span class="highlight-neon">lenta, caindo</span> ou sem sinal?
+          </h1>
 
-              <!-- Radar Dinâmico SVG com Ondas Concêntricas de Transmissão -->
-              <div class="radar-svg-container">
-                <svg class="radar-svg" viewBox="0 0 300 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Círculos concêntricos de radar -->
-                  <circle cx="150" cy="110" r="95" stroke="rgba(0, 210, 255, 0.12)" stroke-width="1" stroke-dasharray="3 3"/>
-                  <circle cx="150" cy="110" r="70" stroke="rgba(0, 210, 255, 0.2)" stroke-width="1.2"/>
-                  <circle cx="150" cy="110" r="45" stroke="rgba(0, 210, 255, 0.3)" stroke-width="1.5"/>
+          <p class="hero-subheadline">
+            Fale agora pelo WhatsApp e informe o problema da sua conexão.
+          </p>
 
-                  <!-- Ondas Animadas de Pulso CSS -->
-                  <circle class="pulse-wave-1" cx="150" cy="110" r="50" stroke="#00d2ff" stroke-width="1.5" fill="none"/>
-                  <circle class="pulse-wave-2" cx="150" cy="110" r="50" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
-                  <circle class="pulse-wave-3" cx="150" cy="110" r="50" stroke="#2563eb" stroke-width="1.5" fill="none"/>
-
-                  <!-- Eixos de Varredura de Sinal -->
-                  <line x1="150" y1="15" x2="150" y2="205" stroke="rgba(0, 210, 255, 0.15)" stroke-width="1"/>
-                  <line x1="55" y1="110" x2="245" y2="110" stroke="rgba(0, 210, 255, 0.15)" stroke-width="1"/>
-
-                  <!-- Torre de Transmissão Central em Neon -->
-                  <polygon points="150,60 162,130 138,130" stroke="#00d2ff" stroke-width="2.5" fill="rgba(0, 210, 255, 0.1)"/>
-                  <line x1="144" y1="85" x2="156" y2="85" stroke="#00d2ff" stroke-width="2"/>
-                  <line x1="141" y1="108" x2="159" y2="108" stroke="#00d2ff" stroke-width="2"/>
-                  <line x1="135" y1="130" x2="165" y2="130" stroke="#00d2ff" stroke-width="3" stroke-linecap="round"/>
-                  
-                  <!-- Ponto Focal Emissor -->
-                  <circle cx="150" cy="58" r="4.5" fill="#25d366"/>
-                  <circle cx="150" cy="58" r="8" stroke="#25d366" stroke-width="1.5" stroke-dasharray="2 2"/>
-
-                  <!-- Ondas de Wi-Fi Superiores -->
-                  <path d="M125 40 C135 30, 165 30, 175 40" stroke="#00d2ff" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M110 25 C130 10, 170 10, 190 25" stroke="rgba(0, 210, 255, 0.4)" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-              </div>
-
-              <!-- Grade de Telemetria de Conectividade -->
-              <div class="telecom-telemetry-grid">
-                <div class="telemetry-item">
-                  <div class="telemetry-label">Sinal Wi-Fi</div>
-                  <div class="telemetry-value crit">Oscilando</div>
-                </div>
-                <div class="telemetry-item">
-                  <div class="telemetry-label">Perda Pacotes</div>
-                  <div class="telemetry-value warn">18.4% (Alto)</div>
-                </div>
-                <div class="telemetry-item">
-                  <div class="telemetry-label">Portadora</div>
-                  <div class="telemetry-value">Fibra / Rádio</div>
-                </div>
-                <div class="telemetry-item">
-                  <div class="telemetry-label">Canal Suporte</div>
-                  <div class="telemetry-value" style="color: #4ade80;">WhatsApp OK</div>
-                </div>
-              </div>
-            </div>
+          <div class="hero-cta-wrapper">
+            <a href="#" class="btn-cta-neon" data-wa-action="true" data-wa-problem="" role="button" aria-label="Falar agora pelo WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.67 20.16 9.33 19.8 8.15 19.1L7.87 18.93L4.76 19.75L5.59 16.72L5.4 16.42C4.63 15.19 4.22 13.57 4.22 11.91C4.22 7.37 7.92 3.67 12.04 3.67ZM8.73 7.34C8.52 7.34 8.24 7.37 8.01 7.63C7.77 7.89 7.07 8.54 7.07 9.87C7.07 11.2 8.04 12.48 8.18 12.66C8.32 12.84 10.03 15.49 12.67 16.63C13.3 16.9 13.79 17.06 14.17 17.18C14.81 17.38 15.39 17.35 15.85 17.28C16.36 17.2 17.43 16.63 17.65 16C17.87 15.37 17.87 14.83 17.8 14.72C17.73 14.61 17.56 14.54 17.3 14.41C17.04 14.28 15.77 13.65 15.54 13.57C15.31 13.48 15.14 13.44 14.97 13.7C14.8 13.96 14.32 14.54 14.17 14.71C14.02 14.89 13.88 14.91 13.62 14.78C13.36 14.65 12.52 14.38 11.53 13.5C10.75 12.8 10.22 11.95 10.07 11.69C9.92 11.43 10.05 11.29 10.18 11.16C10.3 11.04 10.45 10.85 10.59 10.68C10.73 10.51 10.77 10.38 10.86 10.21C10.95 10.04 10.9 9.89 10.83 9.76C10.76 9.63 10.24 8.35 10.03 7.83C9.82 7.33 9.61 7.39 9.45 7.39C9.3 7.39 9.13 7.39 8.96 7.39L8.73 7.34Z"/>
+              </svg>
+              FALAR AGORA PELO WHATSAPP
+            </a>
           </div>
 
+          <p class="hero-support-text">
+            Atendimento rápido pelo WhatsApp.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-       PROBLEMAS EM LISTA / TIMELINE VISUAL
-       (Sem grade de cards igual ao primeiro)
+       3. PROBLEMAS (Fundo Branco/Off-White, Composição Moderna)
        ========================================================================== -->
-    <section class="problems-timeline-section" aria-labelledby="timeline-title">
+    <section class="problems-section" aria-labelledby="problems-title">
       <div class="container">
-        <span class="section-tagline">Triagem Técnica de Sintomas</span>
-        <h2 id="timeline-title" class="timeline-main-title">
-          O que está acontecendo com sua internet?
-        </h2>
-        <p class="timeline-lead-desc">
-          Toque no sintoma correspondente da sua conexão para acionar o suporte direto com a mensagem pré-carregada:
-        </p>
+        <div class="section-header-clean">
+          <span class="section-tag">Diagnóstico Direto</span>
+          <h2 id="problems-title" class="section-title">
+            O que está acontecendo com sua internet?
+          </h2>
+          <p class="section-subtitle">
+            Toque na opção abaixo para abrir o WhatsApp com o sintoma já selecionado:
+          </p>
+        </div>
 
-        <!-- Timeline de Diagnóstico Contínuo -->
-        <div class="diagnostic-timeline">
-
+        <div class="problems-modern-grid">
           <!-- 1. Internet lenta -->
-          <div class="timeline-row-item sev-lenta" data-wa-action="true" data-wa-problem="Internet lenta" role="button" aria-label="Informar Internet lenta">
-            <div class="timeline-left">
-              <span class="timeline-index-code">01 // FLUXO</span>
-              <div class="timeline-details">
-                <div class="timeline-problem-heading">Internet lenta</div>
-                <div class="timeline-problem-symptom">Taxa de download degradada e carregamento lento de páginas e vídeos</div>
-              </div>
+          <div class="problem-card-item" data-wa-action="true" data-wa-problem="Internet lenta" role="button" aria-label="Informar Internet lenta">
+            <div class="problem-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
             </div>
-            <span class="timeline-action-btn">
-              Informar Falha &rarr;
-            </span>
+            <div class="problem-info-col">
+              <div class="problem-name">Internet lenta</div>
+              <div class="problem-hint">Carregamento demorado e lentidão geral</div>
+            </div>
+            <div class="problem-arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </div>
 
           <!-- 2. Internet ruim -->
-          <div class="timeline-row-item sev-ruim" data-wa-action="true" data-wa-problem="Internet ruim" role="button" aria-label="Informar Internet ruim">
-            <div class="timeline-left">
-              <span class="timeline-index-code">02 // SINAL</span>
-              <div class="timeline-details">
-                <div class="timeline-problem-heading">Internet ruim</div>
-                <div class="timeline-problem-symptom">Desempenho geral inconsistente e falhas frequentes de navegação</div>
-              </div>
+          <div class="problem-card-item" data-wa-action="true" data-wa-problem="Internet ruim" role="button" aria-label="Informar Internet ruim">
+            <div class="problem-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+              </svg>
             </div>
-            <span class="timeline-action-btn">
-              Informar Falha &rarr;
-            </span>
+            <div class="problem-info-col">
+              <div class="problem-name">Internet ruim</div>
+              <div class="problem-hint">Instabilidade frequente na qualidade da rede</div>
+            </div>
+            <div class="problem-arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </div>
 
           <!-- 3. Internet caindo -->
-          <div class="timeline-row-item sev-caindo" data-wa-action="true" data-wa-problem="Internet caindo" role="button" aria-label="Informar Internet caindo">
-            <div class="timeline-left">
-              <span class="timeline-index-code">03 // QUEDA</span>
-              <div class="timeline-details">
-                <div class="timeline-problem-heading">Internet caindo</div>
-                <div class="timeline-problem-symptom">Quedas repentinas de sinal e desconexões repetidas ao longo do dia</div>
-              </div>
+          <div class="problem-card-item" data-wa-action="true" data-wa-problem="Internet caindo" role="button" aria-label="Informar Internet caindo">
+            <div class="problem-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+                <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+                <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+                <path d="M10.71 16.03a6 6 0 0 1 2.58-.03"></path>
+                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+              </svg>
             </div>
-            <span class="timeline-action-btn">
-              Informar Falha &rarr;
-            </span>
+            <div class="problem-info-col">
+              <div class="problem-name">Internet caindo</div>
+              <div class="problem-hint">Quedas contínuas e desconexão repetida</div>
+            </div>
+            <div class="problem-arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </div>
 
           <!-- 4. Sem sinal -->
-          <div class="timeline-row-item sev-sinal" data-wa-action="true" data-wa-problem="Sem sinal" role="button" aria-label="Informar Sem sinal">
-            <div class="timeline-left">
-              <span class="timeline-index-code">04 // PORTADORA</span>
-              <div class="timeline-details">
-                <div class="timeline-problem-heading">Sem sinal</div>
-                <div class="timeline-problem-symptom">Luzes do modem apagadas, luz LOS vermelha ou ausência total de sinal</div>
-              </div>
+          <div class="problem-card-item" data-wa-action="true" data-wa-problem="Sem sinal" role="button" aria-label="Informar Sem sinal">
+            <div class="problem-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+              </svg>
             </div>
-            <span class="timeline-action-btn">
-              Informar Falha &rarr;
-            </span>
+            <div class="problem-info-col">
+              <div class="problem-name">Sem sinal</div>
+              <div class="problem-hint">Modem sem sincronia ou luzes de falha</div>
+            </div>
+            <div class="problem-arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </div>
 
           <!-- 5. Internet travando -->
-          <div class="timeline-row-item sev-travando" data-wa-action="true" data-wa-problem="Internet travando" role="button" aria-label="Informar Internet travando">
-            <div class="timeline-left">
-              <span class="timeline-index-code">05 // BUFFER</span>
-              <div class="timeline-details">
-                <div class="timeline-problem-heading">Internet travando</div>
-                <div class="timeline-problem-symptom">Congelamento de transmissões, jogos online com travamentos e latência alta</div>
-              </div>
+          <div class="problem-card-item" data-wa-action="true" data-wa-problem="Internet travando" role="button" aria-label="Informar Internet travando">
+            <div class="problem-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <line x1="10" y1="15" x2="10" y2="9"></line>
+                <line x1="14" y1="15" x2="14" y2="9"></line>
+              </svg>
             </div>
-            <span class="timeline-action-btn">
-              Informar Falha &rarr;
-            </span>
+            <div class="problem-info-col">
+              <div class="problem-name">Internet travando</div>
+              <div class="problem-hint">Engasgos em chamadas, streaming e vídeos</div>
+            </div>
+            <div class="problem-arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </div>
 
           <!-- 6. Conexão instável -->
-          <div class="timeline-row-item sev-instavel" data-wa-action="true" data-wa-problem="Conexão instável" role="button" aria-label="Informar Conexão instável">
-            <div class="timeline-left">
-              <span class="timeline-index-code">06 // ROTA</span>
-              <div class="timeline-details">
-                <div class="timeline-problem-heading">Conexão instável</div>
-                <div class="timeline-problem-symptom">Oscilação constante na velocidade com picos de lentidão e jitter elevado</div>
-              </div>
+          <div class="problem-card-item" data-wa-action="true" data-wa-problem="Conexão instável" role="button" aria-label="Informar Conexão instável">
+            <div class="problem-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
             </div>
-            <span class="timeline-action-btn">
-              Informar Falha &rarr;
-            </span>
+            <div class="problem-info-col">
+              <div class="problem-name">Conexão instável</div>
+              <div class="problem-hint">Oscilação constante na velocidade e latência</div>
+            </div>
+            <div class="problem-arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </div>
 
           <!-- 7. Internet fora do ar -->
-          <div class="timeline-row-item sev-fora" data-wa-action="true" data-wa-problem="Internet fora do ar" role="button" aria-label="Informar Internet fora do ar">
-            <div class="timeline-left">
-              <span class="timeline-index-code">07 // APAGÃO</span>
-              <div class="timeline-details">
-                <div class="timeline-problem-heading">Internet fora do ar</div>
-                <div class="timeline-problem-symptom">Interrupção completa de tráfego de dados na localidade</div>
+          <div class="problem-card-item" data-wa-action="true" data-wa-problem="Internet fora do ar" role="button" aria-label="Informar Internet fora do ar">
+            <div class="problem-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                <line x1="12" y1="2" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <div class="problem-info-col">
+              <div class="problem-name">Internet fora do ar</div>
+              <div class="problem-hint">Interrupção total do fornecimento de dados</div>
+            </div>
+            <div class="problem-arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       4. SEÇÃO VISUAL (Ilustração Própria em SVG/CSS Proporcional — Nada Gigante)
+       ========================================================================== -->
+    <section class="visual-section" aria-label="Ilustração de Conexão e Tecnologia">
+      <div class="container">
+        <div class="visual-banner-card">
+          <!-- Ilustração Proporcional Própria -->
+          <div class="visual-illustration-wrap" aria-hidden="true">
+            <svg class="visual-illustration-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Ondas de Sinal Proporcionais -->
+              <path d="M60 45 C75 30 125 30 140 45" stroke="#00E575" stroke-width="3" stroke-linecap="round" stroke-opacity="0.35"/>
+              <path d="M75 60 C85 50 115 50 125 60" stroke="#00E575" stroke-width="3" stroke-linecap="round" stroke-opacity="0.7"/>
+              <path d="M90 75 C95 70 105 70 110 75" stroke="#00E575" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="100" cy="85" r="3.5" fill="#00E575"/>
+              
+              <!-- Modem Estilizado Compacto -->
+              <rect x="55" y="92" width="90" height="20" rx="5" fill="#062817" stroke="rgba(0, 229, 117, 0.4)" stroke-width="1.5"/>
+              <circle cx="70" cy="102" r="2.5" fill="#00E575"/>
+              <circle cx="80" cy="102" r="2.5" fill="#00E575"/>
+              <circle cx="90" cy="102" r="2.5" fill="#00E575"/>
+              <line x1="120" y1="102" x2="135" y2="102" stroke="#00E575" stroke-width="2" stroke-linecap="round" stroke-opacity="0.6"/>
+              
+              <!-- Antenas Delicadas -->
+              <line x1="68" y1="92" x2="68" y2="76" stroke="#062817" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="68" cy="74" r="2" fill="#00E575"/>
+              <line x1="132" y1="92" x2="132" y2="76" stroke="#062817" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="132" cy="74" r="2" fill="#00E575"/>
+            </svg>
+          </div>
+
+          <div class="visual-content-col">
+            <h3 class="visual-title">Triagem Especializada de Conexão</h3>
+            <p class="visual-desc">
+              Identificamos com rapidez se a falha está no sinal local, roteamento externo ou na operadora da sua região.
+            </p>
+            <div class="visual-features-row">
+              <div class="visual-feature-pill">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Sem filas de espera
+              </div>
+              <div class="visual-feature-pill">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Canal direto no WhatsApp
+              </div>
+              <div class="visual-feature-pill">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Orientação imediata
               </div>
             </div>
-            <span class="timeline-action-btn">
-              Informar Falha &rarr;
-            </span>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-       SEÇÃO CONTEXTUAL NIO DISCRETA (Estilo Radar Técnico)
+       5. CONTEXTO NIO DISCRETO
        ========================================================================== -->
-    <section class="nio-context-section" aria-labelledby="nio-title">
+    <section class="nio-context-clean" aria-labelledby="nio-title">
       <div class="container">
-        <div class="nio-tech-box">
-          <div class="nio-tech-badge">
-            Orientação Técnica & Suporte de Rede
-          </div>
+        <div class="nio-context-box">
+          <span class="nio-badge-tag">Consulta Técnica Contextual</span>
 
-          <h2 id="nio-title" class="nio-headline">
-            Está pesquisando por internet lenta Nio, Nio sem sinal, internet Nio caindo ou problemas de conexão?
+          <h2 id="nio-title" class="nio-query-headline">
+            Está pesquisando por internet lenta Nio, Nio sem sinal, Nio fora do ar ou problemas de conexão?
           </h2>
 
-          <p class="nio-body-text">
-            Fale pelo WhatsApp e informe o que está acontecendo com sua internet. Se você pesquisou por Nio fora do ar, Nio internet caindo, internet sem sinal ou lentidão, nossa equipe auxilia você com rapidez para identificar o problema com internet e orientar sobre as melhores soluções de estabilidade.
+          <p class="nio-query-text">
+            Fale pelo WhatsApp e informe o que está acontecendo com sua internet. Se você pesquisou por Nio internet caindo, internet sem sinal ou lentidão, nossa equipe auxilia você com rapidez para identificar o problema com internet e orientar sobre as melhores soluções de estabilidade.
           </p>
 
-          <div class="nio-action-row">
-            <a href="#" class="btn-nio-wa" data-wa-action="true" data-wa-problem="Problema de conexão" role="button">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.67 20.16 9.33 19.8 8.15 19.1L7.87 18.93L4.76 19.75L5.59 16.72L5.4 16.42C4.63 15.19 4.22 13.57 4.22 11.91C4.22 7.37 7.92 3.67 12.04 3.67Z"/>
-              </svg>
-              INFORMAR PROBLEMA PELO WHATSAPP
-            </a>
+          <a href="#" class="btn-nio-clean-wa" data-wa-action="true" data-wa-problem="Problema de conexão" role="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.67 20.16 9.33 19.8 8.15 19.1L7.87 18.93L4.76 19.75L5.59 16.72L5.4 16.42C4.63 15.19 4.22 13.57 4.22 11.91C4.22 7.37 7.92 3.67 12.04 3.67M8.73 7.34C8.52 7.34 8.24 7.37 8.01 7.63C7.77 7.89 7.07 8.54 7.07 9.87C7.07 11.2 8.04 12.48 8.18 12.66C8.32 12.84 10.03 15.49 12.67 16.63C13.3 16.9 13.79 17.06 14.17 17.18C14.81 17.38 15.39 17.35 15.85 17.28C16.36 17.2 17.43 16.63 17.65 16C17.87 15.37 17.87 14.83 17.8 14.72C17.73 14.61 17.56 14.54 17.3 14.41C17.04 14.28 15.77 13.65 15.54 13.57C15.31 13.48 15.14 13.44 14.97 13.7C14.8 13.96 14.32 14.54 14.17 14.71C14.02 14.89 13.88 14.91 13.62 14.78C13.36 14.65 12.52 14.38 11.53 13.5C10.75 12.8 10.22 11.95 10.07 11.69C9.92 11.43 10.05 11.29 10.18 11.16C10.3 11.04 10.45 10.85 10.59 10.68C10.73 10.51 10.77 10.38 10.86 10.21C10.95 10.04 10.9 9.89 10.83 9.76C10.76 9.63 10.24 8.35 10.03 7.83C9.82 7.33 9.61 7.39 9.45 7.39C9.3 7.39 9.13 7.39 8.96 7.39L8.73 7.34Z"/>
+            </svg>
+            Falar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       COMO FUNCIONA (3 Passos Simples)
+       ========================================================================== -->
+    <section class="steps-clean-section" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="section-header-clean">
+          <span class="section-tag">Passo a Passo</span>
+          <h2 id="steps-title" class="section-title">Como funciona o atendimento</h2>
+          <p class="section-subtitle">
+            Rápido, prático e sem intermediários.
+          </p>
+        </div>
+
+        <div class="steps-clean-grid">
+          <div class="step-clean-card">
+            <div class="step-badge-num">1</div>
+            <h3 class="step-card-title">Escolha o problema</h3>
+            <p class="step-card-desc">
+              Identifique se sua internet está lenta, caindo ou sem sinal na sua casa ou empresa.
+            </p>
+          </div>
+
+          <div class="step-clean-card">
+            <div class="step-badge-num">2</div>
+            <h3 class="step-card-title">Fale pelo WhatsApp</h3>
+            <p class="step-card-desc">
+              Toque no botão e converse em tempo real com um especialista em conectividade.
+            </p>
+          </div>
+
+          <div class="step-clean-card">
+            <div class="step-badge-num">3</div>
+            <h3 class="step-card-title">Informe cidade/bairro</h3>
+            <p class="step-card-desc">
+              Compartilhe sua localização e operadora para receber a orientação técnica precisa.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-       COMO FUNCIONA (Fluxo Técnico Direto em 3 Nós)
+       6. CTA FINAL (Fundo Verde Escuro, Headline e Botão Grande Verde Neon)
        ========================================================================== -->
-    <section class="workflow-section" aria-labelledby="workflow-title">
+    <section class="final-cta-section" aria-labelledby="final-title">
       <div class="container">
-        <span class="section-tagline">Protocolo Simples</span>
-        <h2 id="workflow-title" class="timeline-main-title">Como funciona o atendimento</h2>
-        <p class="timeline-lead-desc">
-          Resolução rápida sem formulários nem esperas telefônicas.
+        <h2 id="final-title" class="final-headline">
+          Internet ruim de novo?
+        </h2>
+        <p class="final-subtext">
+          Explique o problema e fale agora pelo WhatsApp.
         </p>
 
-        <div class="workflow-steps-wrap">
-          <div class="workflow-step-node">
-            <span class="step-node-badge">ETAPA 01</span>
-            <h3 class="step-node-title">Escolha o problema</h3>
-            <p class="step-node-desc">
-              Identifique se sua conexão está lenta, com quedas intermitentes, travamentos ou sem sinal.
-            </p>
-          </div>
-
-          <div class="workflow-step-node">
-            <span class="step-node-badge">ETAPA 02</span>
-            <h3 class="step-node-title">Fale pelo WhatsApp</h3>
-            <p class="step-node-desc">
-              Toque em qualquer botão de ação para abrir o canal seguro de mensagem instantânea.
-            </p>
-          </div>
-
-          <div class="workflow-step-node">
-            <span class="step-node-badge">ETAPA 03</span>
-            <h3 class="step-node-title">Informe cidade/bairro</h3>
-            <p class="step-node-desc">
-              Envie sua localização e relate o que está acontecendo para diagnóstico rápido de rota e sinal.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       CTA FINAL — BLOCO GIGANTE
-       ========================================================================== -->
-    <section class="final-command-section" aria-labelledby="final-title">
-      <div class="container">
-        <div class="final-panel-box">
-          <h2 id="final-title" class="final-panel-headline">
-            Internet ruim de novo?
-          </h2>
-          <p class="final-panel-desc">
-            Explique o problema e fale agora pelo WhatsApp.
-          </p>
-
-          <a href="#" class="btn-final-massive" data-wa-action="true" data-wa-problem="" role="button" aria-label="Chamar no WhatsApp">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <div>
+          <a href="#" class="btn-final-neon" data-wa-action="true" data-wa-problem="" role="button" aria-label="Falar pelo WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.67 20.16 9.33 19.8 8.15 19.1L7.87 18.93L4.76 19.75L5.59 16.72L5.4 16.42C4.63 15.19 4.22 13.57 4.22 11.91C4.22 7.37 7.92 3.67 12.04 3.67ZM8.73 7.34C8.52 7.34 8.24 7.37 8.01 7.63C7.77 7.89 7.07 8.54 7.07 9.87C7.07 11.2 8.04 12.48 8.18 12.66C8.32 12.84 10.03 15.49 12.67 16.63C13.3 16.9 13.79 17.06 14.17 17.18C14.81 17.38 15.39 17.35 15.85 17.28C16.36 17.2 17.43 16.63 17.65 16C17.87 15.37 17.87 14.83 17.8 14.72C17.73 14.61 17.56 14.54 17.3 14.41C17.04 14.28 15.77 13.65 15.54 13.57C15.31 13.48 15.14 13.44 14.97 13.7C14.8 13.96 14.32 14.54 14.17 14.71C14.02 14.89 13.88 14.91 13.62 14.78C13.36 14.65 12.52 14.38 11.53 13.5C10.75 12.8 10.22 11.95 10.07 11.69C9.92 11.43 10.05 11.29 10.18 11.16C10.3 11.04 10.45 10.85 10.59 10.68C10.73 10.51 10.77 10.38 10.86 10.21C10.95 10.04 10.9 9.89 10.83 9.76C10.76 9.63 10.24 8.35 10.03 7.83C9.82 7.33 9.61 7.39 9.45 7.39C9.3 7.39 9.13 7.39 8.96 7.39L8.73 7.34Z"/>
             </svg>
-            CHAMAR NO WHATSAPP
+            FALAR PELO WHATSAPP
           </a>
         </div>
       </div>
@@ -398,33 +408,33 @@
   </main>
 
   <!-- ==========================================================================
-       RODAPÉ TÉCNICO & TRANSPARÊNCIA
+       RODAPÉ (Institucional Limpo)
        ========================================================================== -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-content-col">
-      <nav class="footer-legal-links" aria-label="Links institucionais">
+    <div class="container footer-inner-col">
+      <nav class="footer-nav-row" aria-label="Links institucionais">
         <a href="termos-de-uso">Termos de Uso</a>
         <span>•</span>
         <a href="politica-de-privacidade">Política de Privacidade</a>
       </nav>
 
-      <p class="footer-disclaimer-text">
-        <strong>Aviso Legal & Transparência:</strong> Este canal atua como facilitador técnico independente para esclarecimento e orientação a consumidores sobre qualidade de sinal e redes de banda larga e fibra óptica. Não temos representação institucional exclusiva com provedores citados em pesquisas de mercado.
+      <p class="footer-legal-copy">
+        <strong>Aviso Legal & Transparência:</strong> Este canal atua como facilitador técnico independente para orientação técnica e suporte ao consumidor sobre conexões de internet e fibra óptica. Os termos comerciais citados destinam-se exclusivamente à identificação contextual de buscas de suporte. Não possuímos representação oficial nem vínculo empregatício com as operadoras mencionadas.
       </p>
 
       <p class="footer-copy">
-        &copy; 2026 Central de Conectividade. Todos os direitos reservados.
+        &copy; 2026 Central Conecta. Todos os direitos reservados.
       </p>
     </div>
   </footer>
 
   <!-- ==========================================================================
-       BARRA FIXA INFERIOR NO MOBILE (Dark HUD com Botão Verde Neon)
+       7. MOBILE STICKY BAR (Botão Fixo de WhatsApp no Rodapé Mobile)
        ========================================================================== -->
   <aside class="mobile-sticky-bar" aria-label="Ação rápida WhatsApp">
     <a href="#" class="mobile-sticky-btn" data-wa-action="true" data-wa-problem="" role="button">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.67 20.16 9.33 19.8 8.15 19.1L7.87 18.93L4.76 19.75L5.59 16.72L5.4 16.42C4.63 15.19 4.22 13.57 4.22 11.91C4.22 7.37 7.92 3.67 12.04 3.67Z"/>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.67 20.16 9.33 19.8 8.15 19.1L7.87 18.93L4.76 19.75L5.59 16.72L5.4 16.42C4.63 15.19 4.22 13.57 4.22 11.91C4.22 7.37 7.92 3.67 12.04 3.67M8.73 7.34C8.52 7.34 8.24 7.37 8.01 7.63C7.77 7.89 7.07 8.54 7.07 9.87C7.07 11.2 8.04 12.48 8.18 12.66C8.32 12.84 10.03 15.49 12.67 16.63C13.3 16.9 13.79 17.06 14.17 17.18C14.81 17.38 15.39 17.35 15.85 17.28C16.36 17.2 17.43 16.63 17.65 16C17.87 15.37 17.87 14.83 17.8 14.72C17.73 14.61 17.56 14.54 17.3 14.41C17.04 14.28 15.77 13.65 15.54 13.57C15.31 13.48 15.14 13.44 14.97 13.7C14.8 13.96 14.32 14.54 14.17 14.71C14.02 14.89 13.88 14.91 13.62 14.78C13.36 14.65 12.52 14.38 11.53 13.5C10.75 12.8 10.22 11.95 10.07 11.69C9.92 11.43 10.05 11.29 10.18 11.16C10.3 11.04 10.45 10.85 10.59 10.68C10.73 10.51 10.77 10.38 10.86 10.21C10.95 10.04 10.9 9.89 10.83 9.76C10.76 9.63 10.24 8.35 10.03 7.83C9.82 7.33 9.61 7.39 9.45 7.39C9.3 7.39 9.13 7.39 8.96 7.39L8.73 7.34Z"/>
       </svg>
       Falar pelo WhatsApp
     </a>
