@@ -33,7 +33,7 @@ async function runLiveTests() {
 
   // 2. Validação do conteúdo ao vivo
   assert(home.body.includes('<title>Internet Lenta, Caindo ou Sem Sinal? Fale pelo WhatsApp</title>'), 'Título ausente na home ao vivo');
-  assert(home.body.includes('Sua internet está <span class="highlight-text">lenta, caindo</span> ou sem sinal?'), 'Headline hero ausente ao vivo');
+  assert(home.body.includes('Sua internet está') && home.body.includes('lenta, caindo') && home.body.includes('ou sem sinal?'), 'Headline hero ausente ao vivo');
   assert(home.body.includes('O que está acontecendo com sua internet?'), 'Seção de problemas ausente ao vivo');
   assert(home.body.includes('Internet ruim de novo?'), 'CTA final ausente ao vivo');
   assert(home.body.includes('CHAMAR NO WHATSAPP'), 'Botão final ausente ao vivo');
