@@ -1,11 +1,10 @@
 {
   "name": "central-ajuda-conexao",
   "version": "1.0.0",
+  "private": true,
   "description": "Central de Ajuda e Conectividade — Landing Page de Alta Conversão para Google Ads",
-  "main": "main.js",
   "scripts": {
-    "test": "node test.js",
-    "build": "node -e \"console.log('Build OK: Static project ready')\""
+    "test": "node test.js"
   },
   "keywords": [
     "internet",
