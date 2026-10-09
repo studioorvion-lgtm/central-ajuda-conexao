@@ -135,6 +135,14 @@ test('Template do WhatsApp está centralizado e segue o padrão exato', () => {
   assert(formatted.includes('Problema: Internet lenta'), 'Substituição do problema falhou');
 });
 
+test('Número de WhatsApp atualizado para 5521987561351 e antigo totalmente removido', () => {
+  assert.strictEqual(config.DEFAULT_PHONE, '5521987561351', 'Novo número deve ser 5521987561351');
+  assert(!configJs.includes('5511964322774'), 'Número antigo presente em config.js');
+  assert(!mainJs.includes('5511964322774'), 'Número antigo presente em main.js');
+  assert(!indexHtml.includes('5511964322774'), 'Número antigo presente em index.html');
+  assert(indexHtml.includes('wa.me/5521987561351'), 'Novo número wa.me ausente no HTML');
+});
+
 // 7. Validação de Tracking (UTMs e GCLID)
 test('Tracking preserva utm_source, utm_medium, utm_campaign, utm_term, utm_content, gclid', () => {
   const requiredParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'];

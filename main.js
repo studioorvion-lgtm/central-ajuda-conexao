@@ -7,7 +7,7 @@
   'use strict';
 
   const config = window.APP_CONFIG || {
-    DEFAULT_PHONE: '5511964322774',
+    DEFAULT_PHONE: '5521987561351',
     GOOGLE_ADS_ID: 'AW-18476149806',
     GOOGLE_ADS_CONVERSION_LABEL: '',
     TRACKING_PARAMS: ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'tel'],
@@ -57,13 +57,13 @@
   }
 
   /**
-   * Gera a URL final do WhatsApp com a mensagem codificada
+   * Gera a URL final do WhatsApp (wa.me) com a mensagem codificada
    */
   function getWhatsAppUrl(problemText) {
     const message = buildMessage(problemText);
     const encoded = encodeURIComponent(message);
     const cleanPhone = currentPhone.replace(/\D/g, '');
-    return `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encoded}`;
+    return `https://wa.me/${cleanPhone}?text=${encoded}`;
   }
 
   /**
@@ -143,7 +143,7 @@
 
     // Diagnóstico visual dos botões no console
     if (window.location.hostname === 'localhost' || window.location.search.includes('debug=1')) {
-      console.log('Central de Conectividade: Inicializada com sucesso.');
+      console.log('Central Conecta: Inicializada com sucesso.');
       console.log('Telefone Ativo:', currentPhone);
       console.log('Parâmetros de Tracking:', trackingData);
     }

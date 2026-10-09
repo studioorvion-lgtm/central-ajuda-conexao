@@ -1,12 +1,11 @@
 /**
  * CONFIGURAÇÃO CENTRALIZADA DA APLICAÇÃO
- * CENTRAL DE AJUDA & CONECTIVIDADE
+ * CENTRAL DE AJUDA & CONECTIVIDADE — SEGUNDA OPERAÇÃO
  */
 
 const APP_CONFIG = {
-  // Número oficial de atendimento WhatsApp
-  // Caso deseje trocar, basta atualizar esta constante ou passar via query param ?tel=55...
-  DEFAULT_PHONE: '5511964322774',
+  // Número oficial de atendimento WhatsApp: +55 21 98756-1351
+  DEFAULT_PHONE: '5521987561351',
 
   // Configurações do Google Ads
   GOOGLE_ADS_ID: 'AW-18476149806',
@@ -23,7 +22,7 @@ const APP_CONFIG = {
     'tel'
   ],
 
-  // Mensagem padrão base
+  // Mensagem padrão base preservada
   MESSAGE_TEMPLATE: `Olá! Estou com problema na minha internet.
 
 Problema: {PROBLEMA}

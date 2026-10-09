@@ -59,7 +59,9 @@ async function runLiveTests() {
 
   // 4. Teste de geração e formato das URLs do WhatsApp ao vivo
   const configRes = await fetchUrl(`${BASE_URL}/config.js`);
-  assert(configRes.body.includes('5511964322774'), 'Número padrão configurado no config.js ao vivo');
+  assert(configRes.body.includes('5521987561351'), 'Novo número padrão configurado no config.js ao vivo');
+  assert(!configRes.body.includes('5511964322774'), 'Número antigo não deve existir no config.js ao vivo');
+  assert(!home.body.includes('5511964322774'), 'Número antigo não deve existir na home ao vivo');
 
   const problems = [
     'Internet lenta',
@@ -81,12 +83,12 @@ Internet atual:`;
   for (const prob of problems) {
     const msg = tpl.replace('{PROBLEMA}', prob);
     const encoded = encodeURIComponent(msg);
-    const waUrl = `https://api.whatsapp.com/send?phone=5511964322774&text=${encoded}`;
+    const waUrl = `https://wa.me/5521987561351?text=${encoded}`;
     
     // Verifica decodificação
     const decoded = decodeURIComponent(waUrl.split('text=')[1]);
     assert(decoded.includes(`Problema: ${prob}`), `Problema ${prob} formatado incorretamente`);
-    console.log(`✓ Link WhatsApp testado para: "${prob}" -> URL válida`);
+    console.log(`✓ Link WhatsApp testado para: "${prob}" -> URL válida (${waUrl.substring(0, 45)}...)`);
   }
 
   console.log('\nTODOS OS TESTES AO VIVO PASSARAM COM 100% DE SUCESSO!\n');

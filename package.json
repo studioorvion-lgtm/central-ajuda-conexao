@@ -4,7 +4,8 @@
   "private": true,
   "description": "Central de Ajuda e Conectividade — Landing Page de Alta Conversão para Google Ads",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "build": "node test.js"
   },
   "keywords": [
     "internet",
