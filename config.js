@@ -4,8 +4,8 @@
  */
 
 const APP_CONFIG = {
-  // Número oficial de atendimento WhatsApp: +55 46 92003-6376
-  DEFAULT_PHONE: '5546920036376',
+  // Número oficial de atendimento WhatsApp: +55 51 98536-0106
+  DEFAULT_PHONE: '5551985360106',
 
   // Configurações do Google Ads
   GOOGLE_ADS_ID: 'AW-18476149806',

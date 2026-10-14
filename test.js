@@ -135,15 +135,18 @@ test('Template do WhatsApp está centralizado e segue o padrão exato', () => {
   assert(formatted.includes('Problema: Internet lenta'), 'Substituição do problema falhou');
 });
 
-test('Número de WhatsApp atualizado para 5546920036376 e antigos totalmente removidos', () => {
-  assert.strictEqual(config.DEFAULT_PHONE, '5546920036376', 'Novo número deve ser 5546920036376');
+test('Número de WhatsApp atualizado para 5551985360106 e antigos totalmente removidos', () => {
+  assert.strictEqual(config.DEFAULT_PHONE, '5551985360106', 'Novo número deve ser 5551985360106');
+  assert(!configJs.includes('5546920036376'), 'Número antigo 5546920036376 presente em config.js');
+  assert(!mainJs.includes('5546920036376'), 'Número antigo 5546920036376 presente em main.js');
+  assert(!indexHtml.includes('5546920036376'), 'Número antigo 5546920036376 presente em index.html');
   assert(!configJs.includes('5521987561351'), 'Número antigo 5521987561351 presente em config.js');
   assert(!mainJs.includes('5521987561351'), 'Número antigo 5521987561351 presente em main.js');
   assert(!indexHtml.includes('5521987561351'), 'Número antigo 5521987561351 presente em index.html');
   assert(!configJs.includes('5511964322774'), 'Número antigo 5511964322774 presente em config.js');
   assert(!mainJs.includes('5511964322774'), 'Número antigo 5511964322774 presente em main.js');
   assert(!indexHtml.includes('5511964322774'), 'Número antigo 5511964322774 presente em index.html');
-  assert(indexHtml.includes('wa.me/5546920036376'), 'Novo número wa.me ausente no HTML');
+  assert(indexHtml.includes('wa.me/5551985360106'), 'Novo número wa.me ausente no HTML');
 });
 
 // 7. Validação de Tracking (UTMs e GCLID)
