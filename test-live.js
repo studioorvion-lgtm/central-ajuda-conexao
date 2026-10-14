@@ -60,6 +60,7 @@ async function runLiveTests() {
   // 4. Teste de geração e formato das URLs do WhatsApp ao vivo
   const configRes = await fetchUrl(`${BASE_URL}/config.js`);
   assert(configRes.body.includes('5551985360106'), 'Novo número padrão configurado no config.js ao vivo');
+  assert(configRes.body.includes('51985360106'), 'Número exibido configurado no config.js ao vivo');
   assert(!configRes.body.includes('5546920036376'), 'Número antigo 5546920036376 não deve existir no config.js ao vivo');
   assert(!home.body.includes('5546920036376'), 'Número antigo 5546920036376 não deve existir na home ao vivo');
   assert(!configRes.body.includes('5521987561351'), 'Número antigo 5521987561351 não deve existir no config.js ao vivo');

@@ -8,6 +8,7 @@
 
   const config = window.APP_CONFIG || {
     DEFAULT_PHONE: '5551985360106',
+    DISPLAY_PHONE: '51985360106',
     GOOGLE_ADS_ID: 'AW-18476149806',
     GOOGLE_ADS_CONVERSION_LABEL: '',
     TRACKING_PARAMS: ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'tel'],

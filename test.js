@@ -137,6 +137,7 @@ test('Template do WhatsApp está centralizado e segue o padrão exato', () => {
 
 test('Número de WhatsApp atualizado para 5551985360106 e antigos totalmente removidos', () => {
   assert.strictEqual(config.DEFAULT_PHONE, '5551985360106', 'Novo número deve ser 5551985360106');
+  assert.strictEqual(config.DISPLAY_PHONE, '51985360106', 'Número exibido deve ser 51985360106');
   assert(!configJs.includes('5546920036376'), 'Número antigo 5546920036376 presente em config.js');
   assert(!mainJs.includes('5546920036376'), 'Número antigo 5546920036376 presente em main.js');
   assert(!indexHtml.includes('5546920036376'), 'Número antigo 5546920036376 presente em index.html');
