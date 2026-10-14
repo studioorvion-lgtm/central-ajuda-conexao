@@ -172,6 +172,17 @@ test('Botão fixo inferior para mobile presente no HTML e CSS', () => {
   assert(stylesCss.includes('overflow-x: hidden'), 'Proteção contra overflow horizontal ausente');
 });
 
+// 9. Validação de Cache Busting
+test('Cache busting configurado para config.js e main.js no HTML e vercel.json', () => {
+  assert(indexHtml.includes('config.js?v='), 'Script config.js deve conter versionamento ?v=');
+  assert(indexHtml.includes('main.js?v='), 'Script main.js deve conter versionamento ?v=');
+  const vercelJson = JSON.parse(fs.readFileSync(path.join(__dirname, 'vercel.json'), 'utf8'));
+  const configHeader = vercelJson.headers.find(h => h.source === '/config.js');
+  assert(configHeader, 'Header para /config.js ausente no vercel.json');
+  const ccValue = configHeader.headers.find(h => h.key === 'Cache-Control').value;
+  assert(ccValue.includes('no-cache'), 'Cache-Control de /config.js deve ser no-cache');
+});
+
 console.log(`\nResultado dos testes: ${passed} passaram, ${failed} falharam.`);
 if (failed > 0) {
   process.exit(1);
